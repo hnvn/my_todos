@@ -20,14 +20,35 @@ class TodosDatabase extends _$TodosDatabase {
   @override
   int get schemaVersion => 1;
 
-  /// load all todo entries and keep listening data changing by stream
+  /// add new todo entry
+  ///
+  /// return: the generated id
+  Future<int> addTodo(TodoItemsCompanion entry) {
+    return into(todoItems).insert(entry);
+  }
+
+  /// update todo entry
+  Future<void> updateTodo(TodoItemsCompanion entry) {
+    return into(todoItems).insertOnConflictUpdate(entry);
+  }
+
+  /// load all todo entries
+  ///
+  /// return: stream of list of todo entries, the data in stream is auto updated
+  /// as soon as data in database changed
   Stream<List<TodoItem>> get watchAllTodoEntries => select(todoItems).watch();
 
-  /// load all complete todo entries and keep listening data changing by stream
+  /// load all complete todo entries
+  ///
+  /// return: stream of list of todo entries, the data in stream is auto updated
+  /// as soon as data in database changed
   Stream<List<TodoItem>> get watchCompleteTodoEntries =>
       (select(todoItems)..where((t) => t.isComplete.equals(true))).watch();
 
-  /// load all incomplete todo entries and keep listening data changing by stream
+  /// load all incomplete todo entries
+  ///
+  /// return: stream of list of todo entries, the data in stream is auto updated
+  /// as soon as data in database changed
   Stream<List<TodoItem>> get watchIncompleteTodoEntries =>
       (select(todoItems)..where((t) => t.isComplete.equals(false))).watch();
 }
