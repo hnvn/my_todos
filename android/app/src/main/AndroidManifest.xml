@@ -1,8 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="vn.hunghd.my_todos">
    <application
-        android:label="my_todos"
-        android:icon="@mipmap/ic_launcher">
+        android:label="MyTodos"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
