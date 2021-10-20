@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:my_todos/localizations/app_localization.dart';
 import 'package:my_todos/ui/views/all_tasks/all_tasks_view.dart';
 import 'package:my_todos/ui/views/complete_tasks/complete_tasks.dart';
 import 'package:my_todos/ui/views/incomplete_tasks/incomplete_tasks.dart';
@@ -9,9 +11,17 @@ void main() {
   testWidgets('test switching page', (tester) async {
     await tester.pumpWidget(
       const MaterialApp(
+        localizationsDelegates: [
+          AppLocalizationsDelegate(),
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
         home: MyTodosPage(),
       ),
     );
+
+    await tester.pumpAndSettle();
 
     /// verify initial page
     expect(find.byType(AllTasksView), findsOneWidget);

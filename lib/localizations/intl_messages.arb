@@ -1,0 +1,22 @@
+{
+  "@@locale": "en",
+  "@@last_modified": "2021-10-20T22:44:00.012669",
+  "todosTitle": "Todos",
+  "@todosTitle": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "completeTitle": "Complete",
+  "@completeTitle": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "incompleteTitle": "Incomplete",
+  "@incompleteTitle": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  }
+}

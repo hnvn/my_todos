@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:my_todos/localizations/app_localization.dart';
 import 'package:my_todos/logic/blocs/todos.dart';
 import 'package:my_todos/ui/themes/light_theme.dart' as light;
 import 'package:my_todos/ui/themes/dark_theme.dart' as dark;
@@ -29,6 +31,20 @@ class _MyTodosAppState extends State<MyTodosApp> {
         title: 'My Todos',
         theme: light.theme,
         darkTheme: dark.theme,
+        localizationsDelegates: const [
+          AppLocalizationsDelegate(),
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale('vi'),
+          Locale('en'),
+        ],
+        localeResolutionCallback:
+            (Locale? locale, Iterable<Locale> supportedLocales) {
+          return locale;
+        },
         home: const MyTodosPage(),
       ),
     );

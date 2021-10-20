@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_todos/localizations/app_localization.dart';
 import 'package:my_todos/ui/views/all_tasks/all_tasks_view.dart';
 import 'package:my_todos/ui/views/complete_tasks/complete_tasks.dart';
 import 'package:my_todos/ui/views/incomplete_tasks/incomplete_tasks.dart';
@@ -45,19 +46,19 @@ class _MyTodosPageState extends State<MyTodosPage> {
           BottomNavigationBarItem(
             icon: Icon(
                 _currentPageIndex == 0 ? Icons.ballot : Icons.ballot_outlined),
-            label: 'Todos',
+            label: AppLocalization.of(context)!.todosTitle,
           ),
           BottomNavigationBarItem(
             icon: Icon(_currentPageIndex == 1
                 ? Icons.check_box
                 : Icons.check_box_outlined),
-            label: 'Complete',
+            label: AppLocalization.of(context)!.completeTitle,
           ),
           BottomNavigationBarItem(
             icon: Icon(_currentPageIndex == 2
                 ? Icons.indeterminate_check_box
                 : Icons.indeterminate_check_box_outlined),
-            label: 'Incomplete',
+            label: AppLocalization.of(context)!.incompleteTitle,
           )
         ],
       );
