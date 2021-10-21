@@ -109,4 +109,28 @@ class AppLocalization {
       locale: localeName,
     );
   }
+
+  String get noDataMessage {
+    return Intl.message(
+      'No data found',
+      name: 'noDataMessage',
+      locale: localeName,
+    );
+  }
+
+  String get commonErrorMessage {
+    return Intl.message(
+      'Opps, something went wrong.\nPlease reopen app and try again.',
+      name: 'commonErrorMessage',
+      locale: localeName,
+    );
+  }
+
+  String get commonErrorShortMessage {
+    return Intl.message(
+      'Something went wrong. Please try again.',
+      name: 'commonErrorShortMessage',
+      locale: localeName,
+    );
+  }
 }

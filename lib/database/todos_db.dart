@@ -17,6 +17,8 @@ class TodoItems extends Table {
 class TodosDatabase extends _$TodosDatabase {
   TodosDatabase() : super(_openConnection());
 
+  TodosDatabase.mock(QueryExecutor e) : super(e);
+
   @override
   int get schemaVersion => 1;
 

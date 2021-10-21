@@ -22,10 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function> {
     "cancelAction" : MessageLookupByLibrary.simpleMessage("Cancel"),
+    "commonErrorMessage" : MessageLookupByLibrary.simpleMessage("Opps, something went wrong.\nPlease reopen app and try again."),
+    "commonErrorShortMessage" : MessageLookupByLibrary.simpleMessage("Something went wrong. Please try again."),
     "completeTitle" : MessageLookupByLibrary.simpleMessage("Complete"),
     "discardAction" : MessageLookupByLibrary.simpleMessage("Discard"),
     "incompleteTitle" : MessageLookupByLibrary.simpleMessage("Incomplete"),
     "newTaskTitle" : MessageLookupByLibrary.simpleMessage("New task"),
+    "noDataMessage" : MessageLookupByLibrary.simpleMessage("No data found"),
     "quitNewTaskAlertMessage" : MessageLookupByLibrary.simpleMessage("Are you sure you want to discard the current draft?"),
     "quitNewTaskAlertTitle" : MessageLookupByLibrary.simpleMessage("Discard current task?"),
     "saveAction" : MessageLookupByLibrary.simpleMessage("Save"),

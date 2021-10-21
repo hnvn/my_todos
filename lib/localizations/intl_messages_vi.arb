@@ -54,5 +54,23 @@
         "type": "text",
         "placeholders_order": [],
         "placeholders": {}
+    },
+    "noDataMessage": "Chưa có dữ liệu",
+    "@noDataMessage": {
+      "type": "text",
+      "placeholders_order": [],
+      "placeholders": {}
+    },
+    "commonErrorMessage": "Opps, đã có lỗi xảy ra.\nVui lòng khởi động lại ứng dụng và thử lại.",
+    "@commonErrorMessage": {
+      "type": "text",
+      "placeholders_order": [],
+      "placeholders": {}
+    },
+    "commonErrorShortMessage": "Đã có lỗi xảy ra. Vui lòng thử lại.",
+    "@commonErrorShortMessage": {
+      "type": "text",
+      "placeholders_order": [],
+      "placeholders": {}
     }
 }

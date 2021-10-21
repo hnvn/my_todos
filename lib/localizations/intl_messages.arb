@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "@@last_modified": "2021-10-21T11:28:37.994241",
+  "@@last_modified": "2021-10-21T15:12:47.146330",
   "todosTitle": "Todos",
   "@todosTitle": {
     "type": "text",
@@ -51,6 +51,24 @@
   },
   "discardAction": "Discard",
   "@discardAction": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "noDataMessage": "No data found",
+  "@noDataMessage": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "commonErrorMessage": "Opps, something went wrong.\nPlease reopen app and try again.",
+  "@commonErrorMessage": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "commonErrorShortMessage": "Something went wrong. Please try again.",
+  "@commonErrorShortMessage": {
     "type": "text",
     "placeholders_order": [],
     "placeholders": {}
