@@ -44,6 +44,7 @@ class _NewTodoSheetState extends State<NewTodoSheet> {
   Widget _hitBox() {
     return SizedBox.expand(
       child: GestureDetector(
+        key: const ValueKey('hit_box'),
         onTap: _quitOrAskUser,
       ),
     );
@@ -138,6 +139,7 @@ class _NewTodoSheetState extends State<NewTodoSheet> {
     final result = await showDialog<bool>(
       context: context,
       builder: (c) => AlertDialog(
+        key: const ValueKey('discard_warning'),
         title: Text(AppLocalization.of(context)!.quitNewTaskAlertTitle),
         content: Text(AppLocalization.of(context)!.quitNewTaskAlertMessage),
         actions: [
