@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_todos/localizations/app_localization.dart';
-import 'package:my_todos/ui/views/all_tasks/all_tasks_view.dart';
-import 'package:my_todos/ui/views/complete_tasks/complete_tasks.dart';
-import 'package:my_todos/ui/views/incomplete_tasks/incomplete_tasks.dart';
+import 'package:my_todos/logic/blocs/todos.dart';
+import 'package:my_todos/ui/views/all_tasks_view.dart';
+import 'package:my_todos/ui/views/complete_tasks_view.dart';
+import 'package:my_todos/ui/views/incomplete_tasks_view.dart';
 import 'package:my_todos/ui/widgets/new_todo_sheet.dart';
+import 'package:provider/provider.dart';
 
 class MyTodosPage extends StatefulWidget {
   const MyTodosPage({Key? key}) : super(key: key);
@@ -13,12 +15,14 @@ class MyTodosPage extends StatefulWidget {
 }
 
 class _MyTodosPageState extends State<MyTodosPage> {
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
   final _pageController = PageController(initialPage: 0, keepPage: true);
   int _currentPageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       body: _bodyPageView(),
       bottomNavigationBar: _bottomNavBar(),
       floatingActionButton: FloatingActionButton(
@@ -86,7 +90,7 @@ class _MyTodosPageState extends State<MyTodosPage> {
   }
 
   Future<void> _showNewTodoSheet() async {
-    await showModalBottomSheet(
+    final taskTitle = await showModalBottomSheet<String>(
       context: context,
       enableDrag: false,
       isDismissible: false,
@@ -97,5 +101,16 @@ class _MyTodosPageState extends State<MyTodosPage> {
         child: const NewTodoSheet(),
       ),
     );
+
+    if (taskTitle != null) {
+      final bloc = Provider.of<TodosBloc>(context, listen: false);
+      try {
+        await bloc.addNewTodo(taskTitle);
+      } catch (e) {
+        _scaffoldKey.currentState!.showSnackBar(SnackBar(
+          content: Text(AppLocalization.of(context)!.commonErrorShortMessage),
+        ));
+      }
+    }
   }
 }
