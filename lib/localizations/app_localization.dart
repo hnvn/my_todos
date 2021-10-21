@@ -61,4 +61,52 @@ class AppLocalization {
       locale: localeName,
     );
   }
+
+  String get newTaskTitle {
+    return Intl.message(
+      'New task',
+      name: 'newTaskTitle',
+      locale: localeName,
+    );
+  }
+
+  String get saveAction {
+    return Intl.message(
+      'Save',
+      name: 'saveAction',
+      locale: localeName,
+    );
+  }
+
+  String get quitNewTaskAlertTitle {
+    return Intl.message(
+      'Discard current task?',
+      name: 'quitNewTaskAlertTitle',
+      locale: localeName,
+    );
+  }
+
+  String get quitNewTaskAlertMessage {
+    return Intl.message(
+      'Are you sure you want to discard the current draft?',
+      name: 'quitNewTaskAlertMessage',
+      locale: localeName,
+    );
+  }
+
+  String get cancelAction {
+    return Intl.message(
+      'Cancel',
+      name: 'cancelAction',
+      locale: localeName,
+    );
+  }
+
+  String get discardAction {
+    return Intl.message(
+      'Discard',
+      name: 'discardAction',
+      locale: localeName,
+    );
+  }
 }

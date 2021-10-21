@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "@@last_modified": "2021-10-20T22:44:00.012669",
+  "@@last_modified": "2021-10-21T11:28:37.994241",
   "todosTitle": "Todos",
   "@todosTitle": {
     "type": "text",
@@ -15,6 +15,42 @@
   },
   "incompleteTitle": "Incomplete",
   "@incompleteTitle": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "newTaskTitle": "New task",
+  "@newTaskTitle": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "saveAction": "Save",
+  "@saveAction": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "quitNewTaskAlertTitle": "Discard current task?",
+  "@quitNewTaskAlertTitle": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "quitNewTaskAlertMessage": "Are you sure you want to discard the current draft?",
+  "@quitNewTaskAlertMessage": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "cancelAction": "Cancel",
+  "@cancelAction": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "discardAction": "Discard",
+  "@discardAction": {
     "type": "text",
     "placeholders_order": [],
     "placeholders": {}

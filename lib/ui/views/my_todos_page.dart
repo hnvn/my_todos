@@ -3,6 +3,7 @@ import 'package:my_todos/localizations/app_localization.dart';
 import 'package:my_todos/ui/views/all_tasks/all_tasks_view.dart';
 import 'package:my_todos/ui/views/complete_tasks/complete_tasks.dart';
 import 'package:my_todos/ui/views/incomplete_tasks/incomplete_tasks.dart';
+import 'package:my_todos/ui/widgets/new_todo_sheet.dart';
 
 class MyTodosPage extends StatefulWidget {
   const MyTodosPage({Key? key}) : super(key: key);
@@ -20,6 +21,12 @@ class _MyTodosPageState extends State<MyTodosPage> {
     return Scaffold(
       body: _bodyPageView(),
       bottomNavigationBar: _bottomNavBar(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          _showNewTodoSheet();
+        },
+        child: const Icon(Icons.add),
+      ),
     );
   }
 
@@ -76,5 +83,19 @@ class _MyTodosPageState extends State<MyTodosPage> {
     _pageController.animateToPage(index,
         duration: const Duration(milliseconds: 500),
         curve: Curves.linearToEaseOut);
+  }
+
+  Future<void> _showNewTodoSheet() async {
+    await showModalBottomSheet(
+      context: context,
+      enableDrag: false,
+      isDismissible: false,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (c) => Padding(
+        padding: MediaQuery.of(c).viewInsets,
+        child: const NewTodoSheet(),
+      ),
+    );
   }
 }

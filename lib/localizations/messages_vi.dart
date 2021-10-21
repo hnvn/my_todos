@@ -21,8 +21,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function> {
-    "completeTitle" : MessageLookupByLibrary.simpleMessage("Hoàn thành"),
+    "cancelAction" : MessageLookupByLibrary.simpleMessage("Hủy"),
+    "completeTitle" : MessageLookupByLibrary.simpleMessage("Đã hoàn thành"),
+    "discardAction" : MessageLookupByLibrary.simpleMessage("Hủy bản nháp"),
     "incompleteTitle" : MessageLookupByLibrary.simpleMessage("Chưa hoàn thành"),
-    "todosTitle" : MessageLookupByLibrary.simpleMessage("Todos")
+    "newTaskTitle" : MessageLookupByLibrary.simpleMessage("Việc mới cần làm"),
+    "quitNewTaskAlertMessage" : MessageLookupByLibrary.simpleMessage("Bạn có chắc chắn muốn hủy bản nháp hiện tại không?"),
+    "quitNewTaskAlertTitle" : MessageLookupByLibrary.simpleMessage("Hủy việc cần làm hiện tại?"),
+    "saveAction" : MessageLookupByLibrary.simpleMessage("Lưu"),
+    "todosTitle" : MessageLookupByLibrary.simpleMessage("Việc cần làm")
   };
 }

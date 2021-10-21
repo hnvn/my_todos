@@ -1,22 +1,58 @@
-{   
+{
     "@@locale": "vi",
     "@@last_modified": "2021-10-20T22:44:00.012669",
-    "todosTitle": "Todos",
+    "todosTitle": "Việc cần làm",
     "@todosTitle": {
-      "type": "text",
-      "placeholders_order": [],
-      "placeholders": {}
+        "type": "text",
+        "placeholders_order": [],
+        "placeholders": {}
     },
-    "completeTitle": "Hoàn thành",
+    "completeTitle": "Đã hoàn thành",
     "@completeTitle": {
-      "type": "text",
-      "placeholders_order": [],
-      "placeholders": {}
+        "type": "text",
+        "placeholders_order": [],
+        "placeholders": {}
     },
     "incompleteTitle": "Chưa hoàn thành",
     "@incompleteTitle": {
-      "type": "text",
-      "placeholders_order": [],
-      "placeholders": {}
+        "type": "text",
+        "placeholders_order": [],
+        "placeholders": {}
+    },
+    "newTaskTitle": "Việc mới cần làm",
+    "@newTaskTitle": {
+        "type": "text",
+        "placeholders_order": [],
+        "placeholders": {}
+    },
+    "saveAction": "Lưu",
+    "@saveAction": {
+        "type": "text",
+        "placeholders_order": [],
+        "placeholders": {}
+    },
+    "quitNewTaskAlertTitle": "Hủy việc cần làm hiện tại?",
+    "@quitNewTaskAlertTitle": {
+        "type": "text",
+        "placeholders_order": [],
+        "placeholders": {}
+    },
+    "quitNewTaskAlertMessage": "Bạn có chắc chắn muốn hủy bản nháp hiện tại không?",
+    "@quitNewTaskAlertMessage": {
+        "type": "text",
+        "placeholders_order": [],
+        "placeholders": {}
+    },
+    "cancelAction": "Hủy",
+    "@cancelAction": {
+        "type": "text",
+        "placeholders_order": [],
+        "placeholders": {}
+    },
+    "discardAction": "Hủy bản nháp",
+    "@discardAction": {
+        "type": "text",
+        "placeholders_order": [],
+        "placeholders": {}
     }
-  }
+}
