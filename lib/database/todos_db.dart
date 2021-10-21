@@ -31,7 +31,7 @@ class TodosDatabase extends _$TodosDatabase {
 
   /// update todo entry
   Future<void> updateTodo(TodoItemsCompanion entry) {
-    return into(todoItems).insertOnConflictUpdate(entry);
+    return update(todoItems).replace(entry);
   }
 
   /// load all todo entries
