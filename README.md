@@ -1,4 +1,4 @@
-![CI](https://github.com/hnvn/my_todos/workflows/CI/badge.svg)
+![CI](https://github.com/hnvn/my_todos/workflows/CI/badge.svg) [![codecov](https://codecov.io/gh/hnvn/my_todos/branch/main/graph/badge.svg)](https://codecov.io/gh/hnvn/my_todos)
 
 # MyTodos
 
