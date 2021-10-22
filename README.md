@@ -1,16 +1,10 @@
-# my_todos
+![CI](https://github.com/hnvn/my_todos/workflows/CI/badge.svg)
 
-A new Flutter project.
+# MyTodos
 
-## Getting Started
+A Demo Flutter project.
 
-This project is a starting point for a Flutter application.
+## Overview
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Architecture: BLoC (using [Provider](https://pub.dev/packages/provider) and [RxDart](https://pub.dev/packages/rxdart))
+- Database: SQLite (using [Drift](https://pub.dev/packages/drift))
