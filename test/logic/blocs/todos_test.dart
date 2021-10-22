@@ -14,8 +14,8 @@ void main() {
     await db.close();
   });
 
-  group('test todo bloc', () {
-    test('test add new todo', () async {
+  group('test todo bloc,', () {
+    test('add new todo', () async {
       final bloc = TodosBloc.mock(db);
 
       await bloc.addNewTodo('Task 1');
@@ -34,7 +34,7 @@ void main() {
       expect(list3.length, equals(1));
     });
 
-    test('test toggle complete todo', () async {
+    test('toggle complete todo', () async {
       final bloc = TodosBloc.mock(db);
 
       await bloc.addNewTodo('Task 1');
